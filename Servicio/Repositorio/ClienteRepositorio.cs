@@ -3,8 +3,6 @@ using Modelo.ModeloEntrada;
 using Modelo.ModeloSalida;
 using Modelo.Repositorio;
 using Servicio.Contexto;
-using System;
-using System.Collections.Generic;
 using System.Data;
 
 
