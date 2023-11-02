@@ -17,7 +17,7 @@ namespace Servicio.Repositorio
         }
         public Task<bool> AgregarCuenta(CuentasBancariasModelo clienteModelo)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
 
         public async Task<List<CuentasBancariasEntidad>> ConsultarCuentas(int idCliente)
