@@ -10,10 +10,10 @@ namespace Modelo.Repositorio
 {
     public interface ICuentasBancariasRepositorio
     {
-        Task<List<CuentasBancariasEntidad>> ConsultarCuentas(int idCliente);
+        public Task<List<CuentasBancariasEntidad>> ConsultarCuentas(int idCliente);
 
-        Task<bool> AgregarCuenta(CuentasBancariasModelo clienteModelo);
+        public Task<bool> AgregarCuenta(CuentasBancariasModelo clienteModelo);
 
-        Task<bool> EliminarCuenta(int cuenta);
+        public Task<bool> EliminarCuenta(int cuenta);
     }
 }

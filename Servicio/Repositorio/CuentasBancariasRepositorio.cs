@@ -15,7 +15,7 @@ namespace Servicio.Repositorio
         {
             clienteContexto = new ClienteContexto();
         }
-        public Task<bool> AgregarCuenta(CuentasBancariasModelo clienteModelo)
+        public async Task<bool> AgregarCuenta(CuentasBancariasModelo clienteModelo)
         {
             throw new NotImplementedException(); 
         }
@@ -33,7 +33,7 @@ namespace Servicio.Repositorio
             }
         }
 
-        public Task<bool> EliminarCuenta(int cuenta)
+        public async Task<bool> EliminarCuenta(int cuenta)
         {
             throw new NotImplementedException();
         }

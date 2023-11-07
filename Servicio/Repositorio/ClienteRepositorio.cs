@@ -33,6 +33,18 @@ namespace Servicio.Repositorio
             }
         }
 
+        public async Task<ClienteEntidad> ConsultarCliente(int idCliente)
+        {
+            using (IDbConnection db = clienteContexto.connection)
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@id_cliente", idCliente, DbType.Int32);
+
+                var result = await db.QueryAsync<ClienteEntidad>("ConsultarClientePorId", parameters, commandType: CommandType.StoredProcedure);
+                return result.FirstOrDefault();
+            }
+        }
+
         public async Task<List<ClienteEntidad>> ConsultarClientes()
         {
             using (IDbConnection db = clienteContexto.connection)

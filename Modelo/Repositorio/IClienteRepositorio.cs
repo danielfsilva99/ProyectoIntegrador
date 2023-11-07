@@ -10,10 +10,12 @@ namespace Modelo.Repositorio
 {
     public interface IClienteRepositorio
     {
-        Task <List<ClienteEntidad>> ConsultarClientes();
+        public Task<List<ClienteEntidad>> ConsultarClientes();
 
-        Task<bool> AgregarCliente(ClienteModelo clienteModelo);
+        public Task<bool> AgregarCliente(ClienteModelo clienteModelo);
 
-        Task<bool> EliminarCliente(int cliente);
+        public Task<bool> EliminarCliente(int cliente);
+
+        public Task<ClienteEntidad> ConsultarCliente(int idCliente);
     }
 }

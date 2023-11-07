@@ -43,5 +43,13 @@ namespace ProyectoIntegrador.Controllers
             return StatusCode(201);
         }
 
+        [HttpGet("{clienteId}")]
+        public async Task<ClienteEntidad> GetComprasCliente(int clienteId)
+        {
+            var cliente = await clienteRepositorio.ConsultarCliente(clienteId) ;
+            
+            return cliente;
+        }
+
     }
 }
